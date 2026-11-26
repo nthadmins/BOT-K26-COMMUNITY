@@ -1,0 +1,20 @@
+{
+  "name": "discord-ticket-event-bot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Discord bot with ticket panels and event management",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "deploy": "node scripts/deploy-commands.js",
+    "check": "node --check src/index.js && node --check src/storage.js && node --check src/access.js && node --check src/giveaway-storage.js && node --check src/giveaway-utils.js && node --check src/moderation-utils.js && node --check src/commands.js && node --check scripts/deploy-commands.js && node --check test/access.test.js && node --check test/giveaway-utils.test.js && node --check test/moderation-utils.test.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20.11.0"
+  },
+  "dependencies": {
+    "discord.js": "^14.19.3",
+    "dotenv": "^16.4.7"
+  }
+}
